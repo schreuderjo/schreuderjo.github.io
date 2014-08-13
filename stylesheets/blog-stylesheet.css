@@ -1,12 +1,15 @@
 * {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
   margin: 50px;
   background-color: #000000;
   color: #DEDEDE;
 }
-#header {
+.header {
   display: inline;
 }
 h1 {
@@ -19,7 +22,7 @@ h1 {
   font-size: 50px;
   color: #DEDEDE;
 }
-img {
+div > img {
   float: left;
   width: 70%;
   height: 250px;
@@ -29,7 +32,7 @@ img {
   width: 30%;
   height: 250px;
 }
-#content {
+.nav {
   /*background-color: #003817;*/
 }
 ul {
@@ -57,7 +60,6 @@ a:hover {
 }
 h2 {
   display: inline;
-  padding-bottom: 25px;
 }
 h3 {
   display: block;
@@ -66,33 +68,35 @@ h3 {
 p {
   clear: both;
 }
+.content {
+  margin-top: 40px;
+}
 .left {
   float: left;
-  margin-top: 40px;
-  /*background-color: #003817;*/
   padding: 10px;
-  width: 68%;
+  width: 25%;
 }
 .right {
   float: right;
-  margin-top: 40px;
-  /*background-color: #003817;*/
   padding: 10px;
-  width: 28%;
-}
-#widget {
-  width: 50px;
-  height: 50px;
-  border-radius: 10%;
-  margin: 10px;
-}
-#right {
-  float: right;
+  width:75%;
 }
 .footer {
   clear: both;
-  width: 100%;
   margin-top: 40px;
-  /*background-color: #003817;*/
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#widget {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 10%;
+  margin: 10px;
 }
