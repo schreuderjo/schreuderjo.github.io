@@ -1,0 +1,46 @@
+/* include your css here */
+img {
+  display: block;
+  max-width: 100%;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body {
+  margin-left: 100px;
+  max-width: 80%;
+}
+h1 {
+  font-size: 3em;
+  font-family: serif;
+}
+p {
+  font-size: 1.5em;
+}
+body {
+  background-color: yellow;
+}
+h3 {
+  color: green;
+  font-size: 2em;
+}
+h4 {
+  font-size: 2em;
+}
+.left {
+  float: left;
+  clear: left;
+  max-width: 40%
+}
+.right {
+  float: right;
+  clear: right;
+  max-width: 40%;
+}
+.reflection {
+  color: blue;
+  font-size: 1em;
+}
+.clear {
+  clear: both;
+}
