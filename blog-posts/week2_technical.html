@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" >
+  </head>
+  <body>
+    <header>
+     <div id="header">
+        <img id="logo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpfimVrRGTQraOL7gWH-YN7ooTL0nRGDzrwDNvOYDJ82r4wAoh1w" />
+        <div id="indent">
+          <h1>Jordan Schreuder</h1>
+          <h3>Developer / Writer / Ponderer</h3>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div id="nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="left">
+      <h2>Week_2_t2 Inline vs. Inline Block 8/17/14</h2>
+      <img id="display_inline_block" src="http://designshack.co.uk/wp-content/uploads/inlineBlock-0.jpg" />
+      <p>Before we talk about inline vs. inline-block we have to first talk about blocks.  A block in CSS is an object that takes up the entire width of the page and has a line break above and below it.</p>
+      <p>Common block elements include:</p>
+        <ul>
+          <li>div</li>
+          <li>p</li>
+          <li>li</li>
+        </ul>
+      <p>As compared to a block, inline elements only take the necessary width of the object.</p>
+      <p>Common inline elements include:</p>
+        <ul>
+          <li>span</li>
+          <li>a</li>
+        </ul>
+      <p> Check out this graphic for all you visual learners</p>
+      <img id="block_vs_inline" src="http://coding.smashingmagazine.com/wp-content/uploads/2010/06/block-inline.jpg" />
+      <p>Knowing the default display properties of elements allows for the manipulation of inline and block elements.  For example, using li as a default block in a navigation bar would lead to a vertical layout.</p>
+      <p>However, by changing the display of li to inline, the navigation bar can take a horizontal layout. In fact, that's how the above nav bar is written.</p>
+      <p><em>Ok, so what about the pesky inline-block?</em></p>
+      <p>The easy answer is that inline-block is a hybrid of both inline and block display that allows elements to be displayed in the same line while still retaining some block characteristics. This means that pre-set style elements such as height and width from block displays would be retained in an inline-block whereas with inline only margins and padding can be adjusted.</p>
+      <p><em>Ummm...</em></p>
+      <p>Perhaps an example would be useful.</p>
+      <p>Let's say you had a collection of divs or images that you wanted to arrange in a nice grid.  Blocking them would obviously just stack them vertically, and inlining them would not allow for variations in div height, width and other block level style elements.  Hmmmmm...</p>
+      <p>...why not Zoidberg?</p>
+      <img id="zoidberg" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQMIvI7gHWsLBWlI6fPf3W8FYNPueaCiX86U9xN0HzgrW0cfXZnjA" />
+      <p>Just kidding.  Why not display inline?</p>
+      <p>Like this</p>
+      <div id="inline_block_example">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZJAutARELUlKuo8913cs92g_KloPbXHSgwEtFheTV-qWcu_wHuA" />
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ5NkIKkjHb0XNzI0hcqZIScnVGafJKPzbcOCqZBnY85pEEwLgupQ" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd_aeAP4zX8vGTfG-0c-C6tsYHVmll2tP9zngzDU5XyS-cnShq" />
+      </div>
+      <p>Notice that the original heights of the images where retained using inline-block.</p>
+      <p>For more in-depth information and examples check out some of the sources below</p>
+      <h4>Additional Resources</h4>
+        <ul>
+          <li><a href="http://learnlayout.com/inline-block.html">http://learnlayout.com/inline-block.html</a></li>
+          <li><a href="http://dustwell.com/div-span-inline-block.html">http://dustwell.com/div-span-inline-block.html</a></li>
+          <li><a href="http://www.w3schools.com/css/css_display_visibility.asp">http://www.w3schools.com/css/css_display_visibility.asp</a></li>
+        </ul>
+    </div>
+    <div class="right">
+      <h4>Blog Archive</h4>
+      <p>Coming Soon!</p>
+    </div>
+    <div class="footer">
+      <div id="center">
+        <a href="https://www.facebook.com/jordan.schreuder.1"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR-VrEvA9ThgCigGxQ98gVNvxFytLZErYoyZyH1SOel9diJqGXmHhaPHNXk" /></a>
+        <a href="https://twitter.com/wSpottedHawkw"><img id="widget" src="http://www.myintegratedfinancial.com/sites/default/files/users/LoriImel/twitter.png" /></a>
+        <a href="https://www.linkedin.com/profile/view?id=337056946&trk=nav_responsive_tab_profile_pic"><img id="widget" src="http://itechnow.com/wp-content/plugins/social-media-widget/images/sketch/64/linkedin.png" /></a>
+        <a href="https://plus.google.com/117813439495683244186/posts"><img id="widget" src="http://www.semdrive.com/wp-content/uploads/2013/12/google_plus_bloggiks.png" /></a>
+        <a href="https://github.com/schreuderjo"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS32VjdseZsjhcUivLd2b9w_YVDv_EZV2zWTMYfPT8qW-HVmb5W8TUU7Hgw" /></a>
+      </div>
+      <p>Copyright Jordan M. Schreuder 2014</p>
+    </div>
+
+  </body>
+</html>
