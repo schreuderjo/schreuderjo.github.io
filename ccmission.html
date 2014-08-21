@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>My CCMission</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="ccmission.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="5x5grid">
+        <div class="row1">
+          <div class="col1">
+            <!-- <h2>R1C1</h2> -->
+          </div>
+          <div class="col2">
+            <!-- <h2>R1C2</h2> -->
+          </div>
+          <div class="col3">
+            <!-- <h2>R1C3</h2> -->
+          </div>
+          <div class="col4">
+            <!-- <h2>R1C4</h2> -->
+          </div>
+          <div class="col5">
+            <!-- <h2>R1C5</h2> -->
+          </div>
+        </div>
+        <div class="row2">
+          <div class="col1">
+            <!-- <h2>R2C1</h2> -->
+          </div>
+          <div class="col2">
+            <!-- <h2>R2C2</h2> -->
+          </div>
+          <div class="col3">
+            <!-- <h2>R2C3</h2> -->
+          </div>
+          <div class="col4">
+            <!-- <h2>R2C4</h2> -->
+          </div>
+          <div class="col5">
+            <!-- <h2>R2C5</h2> -->
+          </div>
+        </div>
+        <div class="row3">
+          <div class="col1">
+            <!-- <h2>R3C1</h2> -->
+          </div>
+          <div class="col2">
+            <!-- <h2>R3C2</h2> -->
+          </div>
+          <div class="col3">
+            <!-- <h2>R3C3</h2> -->
+          </div>
+          <div class="col4">
+            <!-- <h2>R3C4</h2> -->
+          </div>
+          <div class="col5">
+            <!-- <h2>R3C5</h2> -->
+          </div>
+        </div>
+        <div class="row4">
+          <div class="col1">
+            <!-- <h2>R4C1</h2> -->
+          </div>
+          <div class="col2">
+            <!-- <h2>R4C2</h2> -->
+          </div>
+          <div class="col3">
+            <!-- <h2>R4C3</h2> -->
+          </div>
+          <div class="col4">
+            <!-- <h2>R4C4</h2> -->
+          </div>
+          <div class="col5">
+            <!-- <h2>R4C5</h2> -->
+          </div>
+        </div>
+        <div class="row5">
+          <div class="col1">
+            <!-- <h2>R5C1</h2> -->
+            <img id="poppy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2X8uOcVHgSlrUrHmTtebRzjzqnmsiI7g9yh4K_n4vKuc15Tzw2A" />
+          </div>
+          <div class="col2">
+            <!-- <h2>R5C2</h2> -->
+          </div>
+          <div class="col3">
+            <!-- <h2>R5C3</h2> -->
+            <img id="polly" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTHk-l6tERbLJ8veFZJZcGi6AcywydeZn7D2QFpqgotKWZdGsCtSA" />
+          </div>
+          <div class="col4">
+            <!-- <h2>R5C4</h2> -->
+          </div>
+          <div class="col5">
+            <!-- <h2>R5C5</h2> -->
+            <img id="slob" src="http://ec.l.thumbs.canstockphoto.com/canstock9779887.jpg" />
+          </div>
+        </div>
+      </div>
+      <div = "menu">
+        <p>Click the button to enter a command</p>
+        <button onclick="myPlan()">Command</button>
+        <p>Command Options</p>
+        <p>moveRight() moveLeft() moveUp() moveDown() attack()</p>
+
+        <script>
+        //These objects need to store position and health to be called on in the functions//
+        var poppy = {};
+
+        var polly = {};
+
+        var faddy = {};
+
+        var poppyImg = null;
+
+        function init(){
+          //Initializes the postion of characters at the event window.onload and stores them in variables for easier access later
+          slobImg = document.getElementById('slob');
+          poppyImg = document.getElementById('poppy');
+          poppyImg.style.position = 'relative';
+          poppyImg.style.left = '0px';
+          poppyImg.style.bottom = '0px';
+        }
+
+        //These functions define the movement of poppy around the map as well as the attack function for killing his enemies
+        function moveUp() {
+          poppyImg.style.bottom = parseInt(poppyImg.style.bottom) + 100 + 'px';
+        }
+        function moveDown() {
+          poppyImg.style.bottom = parseInt(poppyImg.style.bottom) + -100 + 'px';
+        }
+        function moveLeft() {
+          poppyImg.style.left = parseInt(poppyImg.style.left) + -250 + 'px';
+        }
+        function moveRight() {
+          poppyImg.style.left = parseInt(poppyImg.style.left) + 250 + 'px';
+        }
+        function attack() {
+          slobImg.style.display = "none";
+        }
+        function myPlan() {
+        var command = prompt("Please enter your command.", "");
+        //These branches check the command entered and then call the corresponding function above.  If something else is entered it returns an error message.//
+        if (command === "moveUp()") {
+          moveUp()
+          }
+        else if (command === "moveDown()") {
+          moveDown()
+        }
+        else if (command === "moveRight()") {
+          moveRight();
+        }
+        else if (command === "moveLeft()") {
+          moveLeft()
+        }
+        else if (command === "attack()") {
+          attack()
+        }
+        else
+          alert("Please enter one of the commands below!")
+        }
+        window.onload = init;
+        //calls the initialize function above
+        </script>
+
+      </div>
+    </div>
+  </body>
+</html>
