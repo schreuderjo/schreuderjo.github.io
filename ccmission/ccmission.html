@@ -133,45 +133,48 @@
           }
 
           function moveUp() {
-            poppy.y += 100;
+            poppy.y += 1;
             poppyImg.style.bottom = parseInt(poppyImg.style.bottom) + 100 + 'px';
           }
           function moveDown() {
-            poppy.y -= 100;
+            poppy.y -= 1;
             poppyImg.style.bottom = parseInt(poppyImg.style.bottom) + -100 + 'px';
           }
           function moveLeft() {
-            poppy.x -= 100;
+            poppy.x -= 1;
             poppyImg.style.left = parseInt(poppyImg.style.left) + -250 + 'px';
           }
           function moveRight() {
-            poppy.x += 100;
+            poppy.x += 1;
             poppyImg.style.left = parseInt(poppyImg.style.left) + 250 + 'px';
           }
           function attack() {
-            if (poppy.x == x && poppy.y == y) {
-              slob.health -= 50;
+            if (poppy.x == 4 && poppy.y == 1) {
+              slob.health -= 100;
+              slobImg.style.display = "none";
               //Need some sort of conditional
-              //slobImg.style.display = "none";
+            }
+            else {
+              alert("Must be adjacent to Enemy to attack!")
             }
           }
           function myPlan() {
           var command = prompt("Please enter your command.", "");
           //These branches check the command entered and then call the corresponding function above.  If something else is entered it returns an error message.//
           if (command === "moveUp();") {
-            moveUp()
+            moveUp();
             }
           else if (command === "moveDown();") {
-            moveDown()
+            moveDown();
           }
           else if (command === "moveRight();") {
             moveRight();
           }
           else if (command === "moveLeft();") {
-            moveLeft()
+            moveLeft();
           }
           else if (command === "attack();") {
-            attack()
+            attack();
           }
           else
             alert("Please enter one of the commands below!")
