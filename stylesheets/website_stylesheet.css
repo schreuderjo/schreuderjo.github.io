@@ -93,6 +93,7 @@ li {
   width: 65%;
   background-color: #a8a096;
   border: 2px ridge #4c5746;
+  overflow: hidden;
 }
 .right {
   float: right;
@@ -101,6 +102,20 @@ li {
   background-color: #a8a096;
   border: 2px ridge #37414D;
   text-align: center;
+}
+.container {
+  display: inline-block;
+  width: 45%;
+  height: 300px;
+  vertical-align: middle;
+  /*background-color: yellow;*/
+  margin: 25px 25px 0 0;
+
+}
+#width100 {
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
 }
 #profpic {
   width: 100%;
