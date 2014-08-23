@@ -1,0 +1,31 @@
+#container {
+  display: block;
+  width: 100%;
+}
+#vsleft {
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+  margin-right: 25px;
+  margin-left: 25px;
+  color: #4c5746;
+}
+#vscenter {
+  display: inline-block;
+  color: #4c5746;
+  width: 5%;
+  vertical-align: middle;
+  margin-right: auto;
+  margin-left: auto;
+}
+#vsright {
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+  margin-right: 25px;
+  margin-left: 25px;
+  color: #4c5746;
+}
+.left h4 {
+  color: #4c5746;
+}
