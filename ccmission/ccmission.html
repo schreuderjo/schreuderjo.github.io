@@ -7,73 +7,53 @@
   </head>
   <body>
     <div class="container">
-      <div class="5x5grid">
+      <div class="grid">
         <div class="row1">
           <div class="col1">
-            <!-- <h2>R1C1</h2> -->
           </div>
           <div class="col2">
-            <!-- <h2>R1C2</h2> -->
           </div>
           <div class="col3">
-            <!-- <h2>R1C3</h2> -->
           </div>
           <div class="col4">
-            <!-- <h2>R1C4</h2> -->
           </div>
           <div class="col5">
-            <!-- <h2>R1C5</h2> -->
           </div>
         </div>
         <div class="row2">
           <div class="col1">
-            <!-- <h2>R2C1</h2> -->
           </div>
           <div class="col2">
-            <!-- <h2>R2C2</h2> -->
           </div>
           <div class="col3">
-            <!-- <h2>R2C3</h2> -->
           </div>
           <div class="col4">
-            <!-- <h2>R2C4</h2> -->
           </div>
           <div class="col5">
-            <!-- <h2>R2C5</h2> -->
           </div>
         </div>
         <div class="row3">
           <div class="col1">
-            <!-- <h2>R3C1</h2> -->
           </div>
           <div class="col2">
-            <!-- <h2>R3C2</h2> -->
           </div>
           <div class="col3">
-            <!-- <h2>R3C3</h2> -->
           </div>
           <div class="col4">
-            <!-- <h2>R3C4</h2> -->
           </div>
           <div class="col5">
-            <!-- <h2>R3C5</h2> -->
           </div>
         </div>
         <div class="row4">
           <div class="col1">
-            <!-- <h2>R4C1</h2> -->
           </div>
           <div class="col2">
-            <!-- <h2>R4C2</h2> -->
           </div>
           <div class="col3">
-            <!-- <h2>R4C3</h2> -->
           </div>
           <div class="col4">
-            <!-- <h2>R4C4</h2> -->
           </div>
           <div class="col5">
-            <!-- <h2>R4C5</h2> -->
           </div>
         </div>
         <div class="row5">
@@ -97,13 +77,18 @@
           </div>
         </div>
       </div>
-      <div = "menu">
+      <div class = "menu">
         <p>Click the button to enter a command</p>
         <button onclick="myPlan()">Command</button>
         <p>Command Options</p>
-        <p>moveRight(); moveLeft(); moveUp(); moveDown(); attack();</p>
+        <p>moveRight();</p>
+        <p>moveLeft();</p>
+        <p>moveUp();</p>
+        <p>moveDown();</p>
+        <p>attack();</p>
 
         <script>
+
           var poppy = {
             health: 100,
             x: 0,
@@ -130,34 +115,40 @@
           poppyImg.style.position = 'relative';
           poppyImg.style.left = '0px';
           poppyImg.style.bottom = '0px';
-          }
+          };
 
           function moveUp() {
             poppy.y += 1;
             poppyImg.style.bottom = parseInt(poppyImg.style.bottom) + 100 + 'px';
-          }
+          };
+
           function moveDown() {
             poppy.y -= 1;
             poppyImg.style.bottom = parseInt(poppyImg.style.bottom) + -100 + 'px';
-          }
+          };
+
           function moveLeft() {
             poppy.x -= 1;
-            poppyImg.style.left = parseInt(poppyImg.style.left) + -250 + 'px';
-          }
+            poppyImg.style.left = parseInt(poppyImg.style.left) + -100 + 'px';
+          };
+
           function moveRight() {
             poppy.x += 1;
-            poppyImg.style.left = parseInt(poppyImg.style.left) + 250 + 'px';
-          }
+            poppyImg.style.left = parseInt(poppyImg.style.left) + 100 + 'px';
+          };
+
           function attack() {
             if (poppy.x == 4 && poppy.y == 1) {
-              slob.health -= 100;
-              slobImg.style.display = "none";
-              //Need some sort of conditional
+              slob.health -= 50;
+              if (slob.health == 0){
+                slobImg.style.display = "none";
+              }
             }
             else {
               alert("Must be adjacent to Enemy to attack!")
             }
-          }
+          };
+
           function myPlan() {
           var command = prompt("Please enter your command.", "");
           //These branches check the command entered and then call the corresponding function above.  If something else is entered it returns an error message.//
@@ -178,8 +169,10 @@
           }
           else
             alert("Please enter one of the commands below!")
-          }
+          };
+
           window.onload = init;
+
         </script>
       </div>
     </div>
