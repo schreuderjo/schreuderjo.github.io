@@ -186,3 +186,6 @@ a img {
   border-radius: 10%;
   margin: 10px;
 }
+img {
+  width: 75%;
+}

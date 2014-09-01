@@ -1,0 +1,11 @@
+
+
+
+friends = ["ETHEL", "JAKE", "CHUCK", "TUCKER"]
+
+friends_2 = friends.map {|name| name.downcase.capitalize}
+
+# friends_2 = ["Ethel", "Jake", "Chuck", "Tucker"]
+
+
+

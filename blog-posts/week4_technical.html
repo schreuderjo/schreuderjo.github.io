@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/website_stylesheet.css" >
+  </head>
+  <body>
+    <header>
+     <div id="header">
+        <img id="logo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpfimVrRGTQraOL7gWH-YN7ooTL0nRGDzrwDNvOYDJ82r4wAoh1w" />
+        <div id="indent">
+          <h1>Jordan Schreuder</h1>
+          <h3>Developer / Writer / Ponderer</h3>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div id="nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="left">
+      <h2>Ruby's .map Method</h2>
+      <p>Ruby comes equipped with some very useful built-in methods. Though you can always write your own, it's helpful to know some of the basic methods, since your own method might use other built in methods.  It's also important to know how to look up methods and what they are capable of.  Personally, I'm a big fan of <a href="http://www.ruby-doc.org/">Ruby Docs.</a></p>
+      <p>This blog post will just focus on one such method: the .map method.  The map method is an enumerable method, which means that it passes the block of code to every element of the object array.</p>
+      <p>Let's take a look at a couple of examples of why this might be useful.</p>
+      <p>Let's say I have an array of numbers 1 through 5 and I wanted to make a new array with their square products.  I can use .map to achieve this quite easily.</p>
+      <img src="../images/map2.png"></img>
+      <p>The .map is passing the block of code in the curly brackets to the object array.  Each object i is being multiplied by its own value and then stored in the new array called sq array.</p>
+      <img src="../images/map3.png"></img>
+      <p>Note that the changed array was stored in a new array called sq_array to be accessed later.  Map is not destructive in that it does not permanently change the values of array.  That's why when we call array again the values are the original values.  .map! however, can be used destructively to overwrite the values of the original array.</p>
+      <p>Let's look at one more example of how this might be useful. Let's say I had an array of names but they were all accidentally written in upper case.  Using our handy little map trick and a couple other built in ruby methods we can fix that.</p>
+       <img src="../images/map4.png"></img>
+       <p>This time the block of code passed via the map method to the friends array contained the method downcase, which changed all the letters to lowercase, and the capitalize, which capitalized the first letter.</p>
+       <p>And remember, for more examples you can always try stack overflow or ruby docs.</p>
+    </div>
+    <div class="right">
+      <h4>Blog Archive</h4>
+      <p>Coming Soon!</p>
+    </div>
+    <div class="footer">
+      <div id="center">
+        <a href="https://www.facebook.com/jordan.schreuder.1"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR-VrEvA9ThgCigGxQ98gVNvxFytLZErYoyZyH1SOel9diJqGXmHhaPHNXk" /></a>
+        <a href="https://twitter.com/wSpottedHawkw"><img id="widget" src="http://www.myintegratedfinancial.com/sites/default/files/users/LoriImel/twitter.png" /></a>
+        <a href="https://www.linkedin.com/profile/view?id=337056946&trk=nav_responsive_tab_profile_pic"><img id="widget" src="http://itechnow.com/wp-content/plugins/social-media-widget/images/sketch/64/linkedin.png" /></a>
+        <a href="https://plus.google.com/117813439495683244186/posts"><img id="widget" src="http://www.semdrive.com/wp-content/uploads/2013/12/google_plus_bloggiks.png" /></a>
+        <a href="https://github.com/schreuderjo"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS32VjdseZsjhcUivLd2b9w_YVDv_EZV2zWTMYfPT8qW-HVmb5W8TUU7Hgw" /></a>
+      </div>
+      <p>Copyright Jordan M. Schreuder 2014</p>
+    </div>
+
+  </body>
+</html>
