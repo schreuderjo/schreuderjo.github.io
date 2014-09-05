@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/website_stylesheet.css" >
+  </head>
+  <body>
+    <header>
+     <div id="header">
+        <img id="logo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpfimVrRGTQraOL7gWH-YN7ooTL0nRGDzrwDNvOYDJ82r4wAoh1w" />
+        <div id="indent">
+          <h1>Jordan Schreuder</h1>
+          <h3>Developer / Writer / Ponderer</h3>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div id="nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="left">
+      <h2>Classes in Ruby</h2>
+      <p>As an object oriented programming language, Ruby uses something called classes to organize a group of objects that share certain attributes or methods.</p>
+      <p>Let's take one of my favorite TV shows as an example.  If I wanted to write a program that stored data about some characters on futurama, I would start by creating a Futurama class.</p>
+      <img id="img2" src="../images/class1.png"></img>
+      <p>The class declaration always starts with the keyword "class" followed by whatever name you assign to the class. Note that unlike variables, which start with lowercase, class names always start with an uppercase letter.  The class closes much like you would expect with an "end" statement.</p>
+      <p>Now that we have created our class lets create and object of the class. When you create an object of a given class, that object is said to have been instantiated, or is now an instance of that class.</p>
+      <img id="img3" src="../images/class2.png"></img>
+      <p>So now we have an object "character" which is an instance of the Futurama class, but it doesn't have any properties or methods yet.  Let's say I wanted my Futurama class to store some data about some of the characters in the show. Let's start with some basics like name, species, and job description.</p>
+      <img src="../images/class3.png"></img>
+      <p>We've created a method called set_name which takes a string as an argument and then returns a string telling us that we have successfully created a character named Fry.  Notice that much like pre-set methods in ruby, we call the method outside the class using dot notation and pass in the argument Fry as a string. We can follow similar protocols to add a couple more methods.</p>
+      <img src="../images/class4.png"></img>
+      <p>The first method in this code will run just fine, but something is not quite right about the set_species and the set_job methods.  Specifically, Ruby tells me there is an undefined local variable in the method set_species.  And Ruby is right; trying to use the local variable name outside the set_name method is just not possible using our current scope.</p>
+      <p>Lucky for us, this is an easy fix.  In much the same way that we created instance objects of the Futurama class, we can also create instance variables using @ notation.  It looks like this.</p>
+      <img src="../images/class5.png"></img>
+      <p>By assigning the local variable name to the instance variable @name we now have access to the instance variable @name throughout the Futurama class, not just in the set_name method.  Now when we call each method outside the class, our output does exactly what we want it to</p>
+      <p>We could continue creating objects and adding new characters to our show, but the code would look remarkably similar.  In fact, we might start to find that there would be an even easier way to manipulate all this data using an initialize method among other things outside the scope of this blog post.</p>
+      <p>While this quick tutorial shows the basics of using classes, instantiating objects, and instance variables to manipulate data, it hardly shows the power of class in Ruby.  Once you master these basics and get comfortable using classes to encapsulate and manipulate data in no time.</p>
+    </div>
+    <div class="right">
+      <h4>Blog Archive</h4>
+      <p>Coming Soon!</p>
+    </div>
+    <div class="footer">
+      <div id="center">
+        <a href="https://www.facebook.com/jordan.schreuder.1"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR-VrEvA9ThgCigGxQ98gVNvxFytLZErYoyZyH1SOel9diJqGXmHhaPHNXk" /></a>
+        <a href="https://twitter.com/wSpottedHawkw"><img id="widget" src="http://www.myintegratedfinancial.com/sites/default/files/users/LoriImel/twitter.png" /></a>
+        <a href="https://www.linkedin.com/profile/view?id=337056946&trk=nav_responsive_tab_profile_pic"><img id="widget" src="http://itechnow.com/wp-content/plugins/social-media-widget/images/sketch/64/linkedin.png" /></a>
+        <a href="https://plus.google.com/117813439495683244186/posts"><img id="widget" src="http://www.semdrive.com/wp-content/uploads/2013/12/google_plus_bloggiks.png" /></a>
+        <a href="https://github.com/schreuderjo"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS32VjdseZsjhcUivLd2b9w_YVDv_EZV2zWTMYfPT8qW-HVmb5W8TUU7Hgw" /></a>
+      </div>
+      <p>Copyright Jordan M. Schreuder 2014</p>
+    </div>
+
+  </body>
+</html>
