@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/website_stylesheet.css" >
+  </head>
+  <body>
+    <header>
+     <div id="header">
+        <img id="logo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpfimVrRGTQraOL7gWH-YN7ooTL0nRGDzrwDNvOYDJ82r4wAoh1w" />
+        <div id="indent">
+          <h1>Jordan Schreuder</h1>
+          <h3>Developer / Writer / Ponderer</h3>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div id="nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="left">
+      <h2>Ruby Class Methods</h2>
+      <p>So far we have been using classes in ruby to organize and manipulate data using built in or user defined methods.  We call the objects instantiated within that class instance objects, and we similarly call the methods we define as instance methods.  An instance object of a class contains all the variables and instance methods of the class to which it belongs.</p>
+      <p>As an example, here is a simple class definition with one instance method.</p>
+      <img src="../images/instancemethod.png" />
+      <p>Class methods may be defined in a very similar sense, but instead of being an instance of the class, class methods are called on the class itself.  It's important to remember that Ruby allows this because classes are also objects in Ruby, even though they contain other objects and methods.</p>
+      <p>To define a class method, we can use a Ruby keyword called self, which simply refers back to the current object. In the example below, self refers back to the class itself.  There are other ways to write class methods, but for now let's keep it simple.</p>
+      <img src="../images/classmethod.png" />
+      <p><em><strong>So when would I need to use a class method instead of an instance method?</strong></em></p>
+      <p>Generally, instance methods are used to do the bulk of the work in classes.  For example, if you needed to use a common string method like .length it would only make sense that you would likely call that method on an instance object string of a class rather than the class itself. We can, however, use class methods to gather information about a class itself.</p>
+      <p>In the example above, the output will simply be the string "Now I'm a class method!" However, using a similar declaration our class method can be more interactive.</p>
+      <p>Using our Futurama example from last week, let's write some simple class objects for some of the characters in the TV series.</p>
+      <img src="../images/classmethod2.png" />
+      <p>So now we have 3 instance objects Fry, Zoidberg, and Bender, but let's say we wanted a way to determine how many of these character objects we have created and we wanted to print that value to the screen.  In this case we are no longer working with one particular instance of the class, but with the class itself.  Let's add a class method that counts how many times our Futurama class is instantiated.</p>
+      <img src="../images/classmethod3.png" />
+      <p>First, we have to create a class variable @@count and set it equal to 0.  Then we have to change the value of @@count by adding 1 to it each time initialize is called, which happens every time an object of the class is created.  Lastly, we have to add a class method that allows access to the value of @@count when called outside the class.  We this code is run in command line, 3 is printed as expected, since we have created 3 characters so far.</p>
+
+
+    </div>
+    <div class="right">
+      <h4>Blog Archive</h4>
+      <p>Coming Soon!</p>
+    </div>
+    <div class="footer">
+      <div id="center">
+        <a href="https://www.facebook.com/jordan.schreuder.1"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR-VrEvA9ThgCigGxQ98gVNvxFytLZErYoyZyH1SOel9diJqGXmHhaPHNXk" /></a>
+        <a href="https://twitter.com/wSpottedHawkw"><img id="widget" src="http://www.myintegratedfinancial.com/sites/default/files/users/LoriImel/twitter.png" /></a>
+        <a href="https://www.linkedin.com/profile/view?id=337056946&trk=nav_responsive_tab_profile_pic"><img id="widget" src="http://itechnow.com/wp-content/plugins/social-media-widget/images/sketch/64/linkedin.png" /></a>
+        <a href="https://plus.google.com/117813439495683244186/posts"><img id="widget" src="http://www.semdrive.com/wp-content/uploads/2013/12/google_plus_bloggiks.png" /></a>
+        <a href="https://github.com/schreuderjo"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS32VjdseZsjhcUivLd2b9w_YVDv_EZV2zWTMYfPT8qW-HVmb5W8TUU7Hgw" /></a>
+      </div>
+      <p>Copyright Jordan M. Schreuder 2014</p>
+    </div>
+
+  </body>
+</html>

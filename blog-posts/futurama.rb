@@ -1,28 +1,25 @@
 
 
+
 class Futurama
-  def set_name(name)
-    puts "#{name} is now a Futurama character!"
-    @name = name
+  @@count = 0
+
+  def initialize(character, species, job)
+    @character = character
+    @species = species
+    @job = job
+
+    @@count += 1
   end
 
-  def set_species(species)
-    puts "#{@name} is of the #{species} species."
-  end
-
-  def set_job(job)
-    puts "#{@name}'s job is #{job}"
+  def self.count
+    @@count
   end
 end
 
-character = Futurama.new
-character.set_name("Fry")
-character.set_species("Human")
-character.set_job("Delivery Boy")
+Fry = Futurama.new("Fry", "Human", "Delivery Boy")
+Zoidberg = Futurama.new("Zoidberg", "Decapodian", "Doctor")
+Bender = Futurama.new("Bender", "Robot", "Bending Unit")
 
-# Output:
-# Fry is now a Futurama character!
-# Fry is of the Human species.
-# Fry's job is Delivery Boy
-
+p Futurama.count
 
