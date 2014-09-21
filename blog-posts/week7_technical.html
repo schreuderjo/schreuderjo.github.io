@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/website_stylesheet.css" >
+  </head>
+  <body>
+    <header>
+     <div id="header">
+        <img id="logo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpfimVrRGTQraOL7gWH-YN7ooTL0nRGDzrwDNvOYDJ82r4wAoh1w" />
+        <div id="indent">
+          <h1>Jordan Schreuder</h1>
+          <h3>Developer / Writer / Ponderer</h3>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div id="nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="left">
+      <h2>SQL Injections: So easy fictional characters can do it</h2>
+      <p>It's funny how little coincidences play out from time to time in our lives.  I was just listening to JK Rowling's "A Casual Vacancy" on audiobook in which some teenagers inadvertently learn about SQL injections at school from a computer teacher's slip of the tongue.  Several of them later decide to expose the brutal hypocrisy of their parents by hacking their small town parish council website and baring family secrets to the world.</p>
+      <p>Naturally, when I returned home from my roadtrip to catch up on my work I saw that we would be diving in to SQL this week, and that injections was one of the tech blog topics, I was amused.</p>
+      <p>As the above fictional example shows, SQL injections are a common way for hackers to exploit a databases weaknesses if its not set up properly.  They are common for two reasons:</p>
+      <ol>
+        <li>SQL injections are relatively simple</li>
+        <li>There is plenty of juicy information stored in databases that hackers want access to</li>
+      </ol>
+      <p>In the book, the teens use SQL statements in the login screen to retrieve the username and password of a recently deceased council member.  Once the login information was secured, they had admin access to post under someone elses name on the site.</p>
+      <p>Of course, SQL injections can be far more harmful than damaging the pride of local citizens.  They can be used to alter or even drop large swaths of data in a database.  For more sensitive information, say medical records, bank records, or online payment forms, this could be a big problem.Imagine all the forms online that ask for a credit card number of a social security number.  A hacker could wreak serious harm with either of these pieces of information.</p>
+      <p>In more technical terms, SQL injection refers to an attempt by a user pass SQL statements directly to an online form.  These statements then have the potential to alter the SQL query that has access to the database.  Think of all the ways in which web browsers and websites allow user input to query a database.  Without proper protection all it takes is some guesswork as to the appropriate table and column names and the right line of code.</p>
+      <p>One of the most common hacks looks like this. Let's say a form asks for a username.  If the user passes a userid "1012 or 1=1" the SQL query might look something like this: SELECT * FROM users WHERE userid = 1012 or 1=1.  Since 1 does in fact equal 1 and we are looking at a boolean operator, this would return true even if there was no userid 1012.</p>
+      <p>Fortunately there are ways to prevent these simple hacks.
+        <ol>
+          <li>An input validation technique can be used to put parameters such as syntax, length, and type on the input garnered from the user. This ensures a distinction between code and user input.</li>
+          <li>A procedure for accessing information can be stored in the database itself and then called from the application.
+          <li>The principal of least privileges should place limits on what a particular user has access to in a database</li>
+        </ol>
+    </div>
+    <div class="right">
+      <h4>Blog Archive</h4>
+      <p>Coming Soon!</p>
+    </div>
+    <div class="footer">
+      <div id="center">
+        <a href="https://www.facebook.com/jordan.schreuder.1"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR-VrEvA9ThgCigGxQ98gVNvxFytLZErYoyZyH1SOel9diJqGXmHhaPHNXk" /></a>
+        <a href="https://twitter.com/wSpottedHawkw"><img id="widget" src="http://www.myintegratedfinancial.com/sites/default/files/users/LoriImel/twitter.png" /></a>
+        <a href="https://www.linkedin.com/profile/view?id=337056946&trk=nav_responsive_tab_profile_pic"><img id="widget" src="http://itechnow.com/wp-content/plugins/social-media-widget/images/sketch/64/linkedin.png" /></a>
+        <a href="https://plus.google.com/117813439495683244186/posts"><img id="widget" src="http://www.semdrive.com/wp-content/uploads/2013/12/google_plus_bloggiks.png" /></a>
+        <a href="https://github.com/schreuderjo"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS32VjdseZsjhcUivLd2b9w_YVDv_EZV2zWTMYfPT8qW-HVmb5W8TUU7Hgw" /></a>
+      </div>
+      <p>Copyright Jordan M. Schreuder 2014</p>
+    </div>
+
+  </body>
+</html>
