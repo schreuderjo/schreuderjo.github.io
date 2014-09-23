@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS/Ruby Cheatsheet</title>
+    <link rel="stylesheet" type="text/css" href ="stylesheets/cheatsheet-stylesheet.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <h1>Ruby and JavaScript Syntax</h1>
+        <h3>Monday, September 22, 2014</h3>
+      </div>
+    </header>
+
+    <p>The following table illustrates some syntactical differences between Ruby and Javascript.  It is important to note that while Ruby is a class-based language Javascript is considered a prototype-based language.</p>
+
+    <p>In ruby, we organize classes to call instance methods on objects of that class to manipulate data. In Javascript, we can simulate Object Oriented Programming using functions to mimic classes.  Using the constructor function on a new object in Javascript allows that object to inherit the prototype methods associated with that function.  Instead of class methods, we say Javascript has static methods that cannot be called on an object, but rather on the class, or function itself.</p>
+    <table>
+      <tr>
+        <td>
+          Topic
+        </td>
+        <td>
+          Ruby
+        </td>
+        <td>
+          JavaScript
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Class Declaration
+        </td>
+        <td>
+          class ClassName<br>
+          end
+        </td>
+        <td>
+          function Person(name, gender){<br>
+          };
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Instance Methods
+        </td>
+        <td>
+          def method_name<br>
+          end
+        </td>
+        <td>
+          ClassName.prototype.method_name = function() {};
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Class Method
+        </td>
+        <td>
+          def self.method_name<br>
+          end
+        </td>
+        <td>
+          ClassName.method_name = function() {};
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Object Instatiation
+        </td>
+        <td>
+          object_name = Class_name.new()
+        </td>
+        <td>
+          var object_name = new Class_name();
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          self vs. this<br>
+          (current object reference)
+        </td>
+        <td>
+          self.method_name
+        </td>
+        <td>
+          this.method_name;
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Variable Declaration
+        </td>
+        <td>
+          variable_name = some_value
+        </td>
+        <td>
+          var variable_name = some_value
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Instance Variables
+        </td>
+        <td>
+          @variable_name = variable_name
+        </td>
+        <td>
+          this.variable_name = some_value;
+        </td>
+      </tr>
+
+    </table>
+
+    <footer class="footer">
+      Created by Charlie Dibble & Jordan Schreuder
+    </footer>
+
+  </body>
+</html>
