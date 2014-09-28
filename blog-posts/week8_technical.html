@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/website_stylesheet.css" >
+  </head>
+  <body>
+    <header>
+     <div id="header">
+        <img id="logo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpfimVrRGTQraOL7gWH-YN7ooTL0nRGDzrwDNvOYDJ82r4wAoh1w" />
+        <div id="indent">
+          <h1>Jordan Schreuder</h1>
+          <h3>Developer / Writer / Ponderer</h3>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div id="nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="left">
+      <h2>MVC</h2>
+      <h3><em>Model-View-Controller</em></h3>
+      <p>A core concept in software architecture called model-view-controller or MVC, is used to dictate the user interface of software applications. This concept is as much a core principle of computer programming as DRY (Don't Repeart Yourself) and thus deserves it's own blog post explanation.</p>
+      <p></p>
+      <p>The primary purpose of MVC is to seperate responsibilities of the user interface into three seperate components. It is perhaps easiest to think about this model starting with the view.</p>
+      <p>The <strong><em>view</em></strong> contains the most updated version of the model and outputs that information to the user in a specified format, i.e. table, text, blog-post, graph, etc. The <strong><em>controller</em></strong> allows the user to send commands or requests to the model to update the model's state.  Finally, the <strong><em>model</em></strong> serves as the manager of data and logic.  Updates to the model can change the output of the view as well as the commands available to the controller</p>
+      <p>In this way, the MVC works in unison to manage user interface. as shown in the image below</p>
+      <img src="http://lkubaski.files.wordpress.com/2012/12/mvc1.gif" />
+      <h3>Let's look at an example</h3>
+      <p>It is always helpful to illustrate a practical example of MVC in action to better understand its principles.</p>
+      <p>Currently, this blog page is a static website, which means that it is mostly just viewable.  It cannot be modified without going in and changing the source code.  Sure, you can click on hyperlinks and they will navigate you around my site, but you cannot input any new information to modify its contents</p>
+      <p>Let's say that I wanted to make my blog more interactive, or at least make it easier for me to write new posts.  Instead of having to create an entire html document for each new posts, let's say that I adopted a framework that allowed my site to have a new blog input field.</p>
+      <p>Now I can use the view to type my new plog post and click the submite button.  The controller, which serves as the brain behind my newly fangled MVC interface, would then notify the model to add this new post to the database of blog posts.  The framework owuld dictate the format and styling elements to render everything in the same way as my previous posts, and the view would now render my latest blog-post.</p>
+      <p>Of course, this is actually on my to do list once I learn how to use framework, and actually researching ruby on rails is how I stumbled upon the concept of MVC and decided it warranted it's own tech blog post.</p>
+    </div>
+    <div class="right">
+      <h4>Blog Archive</h4>
+      <p>Coming Soon!</p>
+    </div>
+    <div class="footer">
+      <div id="center">
+        <a href="https://www.facebook.com/jordan.schreuder.1"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR-VrEvA9ThgCigGxQ98gVNvxFytLZErYoyZyH1SOel9diJqGXmHhaPHNXk" /></a>
+        <a href="https://twitter.com/wSpottedHawkw"><img id="widget" src="http://www.myintegratedfinancial.com/sites/default/files/users/LoriImel/twitter.png" /></a>
+        <a href="https://www.linkedin.com/profile/view?id=337056946&trk=nav_responsive_tab_profile_pic"><img id="widget" src="http://itechnow.com/wp-content/plugins/social-media-widget/images/sketch/64/linkedin.png" /></a>
+        <a href="https://plus.google.com/117813439495683244186/posts"><img id="widget" src="http://www.semdrive.com/wp-content/uploads/2013/12/google_plus_bloggiks.png" /></a>
+        <a href="https://github.com/schreuderjo"><img id="widget" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS32VjdseZsjhcUivLd2b9w_YVDv_EZV2zWTMYfPT8qW-HVmb5W8TUU7Hgw" /></a>
+      </div>
+      <p>Copyright Jordan M. Schreuder 2014</p>
+    </div>
+
+  </body>
+</html>
